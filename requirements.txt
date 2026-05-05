@@ -5,7 +5,7 @@
 Django>=4.2,<5.0
 
 # Database
-mysqlclient>=2.1.0
+# Using SQLite for local development (no external DB adapter required).
 
 # Crispy Forms for Bootstrap 5
 django-crispy-forms>=2.0

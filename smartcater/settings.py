@@ -63,19 +63,12 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'smartcater.wsgi.application'
 
-# Database Configuration - MySQL
+# Database Configuration - SQLite (local development)
+# Using SQLite simplifies local setup and doesn't require MySQL adapter.
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'smartcater',
-        'USER': 'root',
-        'PASSWORD': '123456',
-        'HOST': '127.0.0.1',
-        'PORT': '3306',
-        'OPTIONS': {
-            'charset': 'utf8mb4',
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
-        },
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
