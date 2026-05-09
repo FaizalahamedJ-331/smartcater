@@ -1,0 +1,15 @@
+{
+  "buildCommand": "bash build.sh",
+  "builds": [
+    {
+      "src": "smartcater/wsgi.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "smartcater/wsgi.py"
+    }
+  ]
+}
